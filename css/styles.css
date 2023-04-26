@@ -1,0 +1,90 @@
+
+#checkOut {
+  background-color: #f2f2f2;
+  margin: 3% 0% 3% 0%;
+  border: 1px solid #f2f2f2;
+  padding: 4%;
+  box-shadow: 0.2px 0.5px 1px;
+  overflow: hidden;
+  border-radius : 8px;
+}
+
+#number-container, #securityCode-container {
+  height: 55px;
+}
+
+#cardName {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+#close{
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.flex-microform-focused {
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#expDate {
+  height: 55px;
+  width: 100%;
+}
+
+#expYear {
+  height: 55px;
+  width: 100%
+}
+
+#errors-output {
+  text-align: center;
+  font-size: 15px;
+}
+
+#success-output {
+  text-align: center;
+  font-size: 15px;
+}
+
+.output {
+  display: none;
+}
+
+.right {
+  display: none;
+}
+
+.title {
+  text-align: center;
+}
+
+.butn {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+form {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.row {
+  display:-ms-flexbox;
+  display:flex;-ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  margin-right:-5px;
+  margin-left:-5px
+}
+
+
+.woocommerce form .form-row {
+  display: block;
+}
+  
+.woocommerce .col2-set .col-1, .woocommerce .col2-set .col-2 {
+  max-width: unset;
+}
+  
+  

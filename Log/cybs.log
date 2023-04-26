@@ -1,0 +1,49 @@
+[2021-08-17 14:25:05] [CyberSource\Authentication\Core\MerchantConfiguration] [INFO] authenticationType =>HTTP_SIGNATURE
+[DEBUG] HTTP Request body  ~BEGIN~
+{"clientReferenceInformation":{"code":"cybs_test"},"tokenInformation":{"transientToken":"1C4XLXSEALDJ151KVQLQ1HSZE1GH8PIG4BTME7J6RFN8V0DXCUAL611BCA442C60"}}
+~END~
+*   Trying 66.185.182.149...
+* Connected to api.cybersource.com (66.185.182.149) port 443 (#0)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /opt/lampp/htdocs/wordpress/wp-content/plugins/payment_plugin/vendor/cybersource/rest-client-php/lib/ssl/cacert.pem
+  CApath: none
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server did not agree to a protocol
+* Server certificate:
+* 	 subject: C=US; ST=California; L=Foster City; jurisdictionC=US; jurisdictionST=Delaware; O=Cybersource Corporation; businessCategory=Private Organization; serialNumber=2838921; CN=api.cybersource.com
+* 	 start date: Feb  2 18:48:40 2021 GMT
+* 	 expire date: Feb 28 18:48:39 2022 GMT
+* 	 subjectAltName: api.cybersource.com matched
+* 	 issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2014 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1M
+* 	 SSL certificate verify ok.
+> POST /risk/v1/authentication-setups HTTP/1.1
+Host:api.cybersource.com
+User-Agent: Swagger-Codegen/1.0.0/php
+Accept: application/hal+json;charset=utf-8
+Content-Type: application/json
+v-c-merchant-id:abu_asterisk_0982207_ugx
+Signature:keyid="bd2c5928-c616-419c-83a1-fbd4c46d3af2", algorithm="HmacSHA256", headers="host date (request-target) digest v-c-merchant-id", signature="WTkppu8ol/9MVpnKaQhL3cGIzpcUQCw9sm43SqiMDPA="
+Date:Tue, 17 Aug 2021 14:25:05 GMT
+v-c-client-id:cybs-rest-sdk-php-0.0.23
+Digest: SHA-256=lnfL4vdL/4vh490T7bd7tKYFRRPmCbqhw8ZOB2CFB5k=
+Content-Length: 156
+
+* upload completely sent off: 156 out of 156 bytes
+< HTTP/1.1 400 Bad Request
+< Cache-Control: no-cache, no-store, must-revalidate
+< Pragma: no-cache
+< Expires: -1
+< Strict-Transport-Security: max-age=31536000
+< Content-Type: application/json
+< Content-Length: 200
+< x-response-time: 295ms
+< X-OPNET-Transaction-Trace: 8f56d490-d62a-4470-98c8-52441dbc5a65
+< Connection: keep-alive
+< v-c-correlation-id: 5286e1c9-be12-4e6f-aebc-b2a50df06ff7
+< 
+* Connection #0 to host api.cybersource.com left intact
+[DEBUG] HTTP Response body ~BEGIN~
+{"id":"6292103073056622504265","submitTimeUtc":"2021-08-17T14:25:07Z","status":"INVALID_REQUEST","reason":"INVALID_DATA","message":"Declined - One or more fields in the request contains invalid data"}
+~END~
